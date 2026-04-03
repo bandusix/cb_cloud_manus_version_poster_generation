@@ -29,17 +29,9 @@ from PIL import Image, ImageDraw, ImageFont
 # ═══════════════════════════════════════════════════════
 _DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Font paths: prefer bundled fonts/ directory; fall back to system fonts
-_FONT_DIR    = os.path.join(_DIR, "fonts")
-FONT_BOLD    = os.path.join(_FONT_DIR, "NotoSans-ExtraBold.ttf") \
-               if os.path.exists(os.path.join(_FONT_DIR, "NotoSans-ExtraBold.ttf")) \
-               else "/usr/share/fonts/truetype/noto/NotoSans-ExtraBold.ttf"
-FONT_REGULAR = os.path.join(_FONT_DIR, "NotoSans-Bold.ttf") \
-               if os.path.exists(os.path.join(_FONT_DIR, "NotoSans-Bold.ttf")) \
-               else "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
-FONT_CJK     = os.path.join(_FONT_DIR, "NotoSansCJKsc-Bold.otf") \
-               if os.path.exists(os.path.join(_FONT_DIR, "NotoSansCJKsc-Bold.otf")) \
-               else "/usr/share/fonts/opentype/noto/NotoSansCJKsc-Bold.otf"
+FONT_BOLD    = "/usr/share/fonts/truetype/noto/NotoSans-ExtraBold.ttf"
+FONT_REGULAR = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
+FONT_CJK     = "/usr/share/fonts/opentype/noto/NotoSansCJKsc-Bold.otf"
 PLAY_BUTTON_PATH = os.path.join(_DIR, "play_button.png")
 OUTPUT_DIR   = os.path.join(_DIR, "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
